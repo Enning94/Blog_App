@@ -122,7 +122,10 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-
+- Validations, Model specs, and n+1 problems
+- Add Devise
+- Integration specs for Views
+- Create an API instead of API consumption
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
