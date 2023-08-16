@@ -19,6 +19,8 @@ node_modules
 /tmp/storage/*
 !/tmp/storage/
 !/tmp/storage/.keep
+/tmp/cache/bootsnap/
+
 
 /public/assets
 
