@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: hello_rails
+  database: blog_app_development
   username: postgres
   password: nhanha94
   # database: blog_app_development
