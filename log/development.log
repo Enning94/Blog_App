@@ -741,3 +741,269 @@ FOREIGN KEY ("post_id")
   [1m[36mPost Update (0.6ms)[0m  [1m[33mUPDATE "posts" SET "likes_counter" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["likes_counter", 2], ["updated_at", "2023-08-17 10:51:08.477235"], ["id", 1]]
   [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "posts_counter" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["posts_counter", 2], ["updated_at", "2023-08-17 10:51:08.479487"], ["id", 1]]
   [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2023-08-22 08:18:43 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.0ms | Allocations: 636)
+Completed 200 OK in 24ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 7355)
+
+
+Started GET "/rails/info/routes" for ::1 at 2023-08-22 09:01:46 +0000
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionpack-7.0.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [30 times] (Duration: 8.1ms | Allocations: 5104)
+  Rendered /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionpack-7.0.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 2.4ms | Allocations: 1366)
+  Rendered /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 12.8ms | Allocations: 9783)
+  Rendered layout /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/layouts/application.html.erb (Duration: 13.1ms | Allocations: 10073)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 11035)
+
+
+Started GET "/rails/info/routes" for ::1 at 2023-08-22 09:04:43 +0000
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionpack-7.0.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [38 times] (Duration: 2.8ms | Allocations: 6064)
+  Rendered /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionpack-7.0.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.8ms | Allocations: 884)
+  Rendered /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 5.4ms | Allocations: 10726)
+  Rendered layout /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/layouts/application.html.erb (Duration: 5.8ms | Allocations: 11003)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 11782)
+
+
+Started GET "/rails/info/routes" for ::1 at 2023-08-22 10:34:18 +0000
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionpack-7.0.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [46 times] (Duration: 6.0ms | Allocations: 6966)
+  Rendered /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionpack-7.0.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.2ms | Allocations: 166)
+  Rendered /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 7.9ms | Allocations: 11208)
+  Rendered layout /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/layouts/application.html.erb (Duration: 8.0ms | Allocations: 11293)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 11551)
+
+
+Started GET "/rails/info/routes" for ::1 at 2023-08-22 10:38:24 +0000
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionpack-7.0.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [46 times] (Duration: 4.1ms | Allocations: 6966)
+  Rendered /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionpack-7.0.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.2ms | Allocations: 166)
+  Rendered /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 6.1ms | Allocations: 11210)
+  Rendered layout /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/layouts/application.html.erb (Duration: 6.2ms | Allocations: 11294)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 11548)
+
+
+Started GET "/rails/info/routes" for ::1 at 2023-08-22 10:43:02 +0000
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionpack-7.0.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [46 times] (Duration: 17.2ms | Allocations: 6966)
+  Rendered /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionpack-7.0.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.4ms | Allocations: 166)
+  Rendered /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 19.3ms | Allocations: 11213)
+  Rendered layout /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/layouts/application.html.erb (Duration: 19.4ms | Allocations: 11298)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 11553)
+
+
+Started GET "/users" for ::1 at 2023-08-22 10:50:33 +0000
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/users" for ::1 at 2023-08-22 10:53:06 +0000
+  
+SyntaxError (/Users/kay/Desktop/Microverse Program/Return/module-5/week1/Blog_App/config/routes.rb:5: syntax error, unexpected local variable or method, expecting `end' or dummy end
+resources :users only: [:index, :show] do
+                 ^~~~
+):
+  
+config/routes.rb:5: syntax error, unexpected local variable or method, expecting `end' or dummy end
+config/routes.rb:5: syntax error, unexpected local variable or method, expecting `end' or dummy end
+config/routes.rb:5: syntax error, unexpected local variable or method, expecting `end' or dummy end
+Started GET "/users" for ::1 at 2023-08-22 10:53:10 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2023-08-22 10:54:14 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2023-08-22 10:54:15 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2023-08-22 10:54:15 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/" for ::1 at 2023-08-22 10:54:18 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for ::1 at 2023-08-22 10:54:18 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for ::1 at 2023-08-22 10:56:03 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for ::1 at 2023-08-22 10:56:04 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for ::1 at 2023-08-22 10:56:04 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for ::1 at 2023-08-22 10:57:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/" for ::1 at 2023-08-22 10:58:27 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 284)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2236)
+
+
+Started GET "/" for ::1 at 2023-08-22 10:58:28 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kay/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 272)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 901)
+
+
+Started GET "/users" for ::1 at 2023-08-22 10:58:35 +0000
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/posts" for ::1 at 2023-08-22 10:58:43 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/posts" for ::1 at 2023-08-22 10:58:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/posts" for ::1 at 2023-08-22 10:58:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/" for ::1 at 2023-08-22 10:58:54 +0000
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/" for ::1 at 2023-08-22 11:02:39 +0000
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/" for ::1 at 2023-08-22 11:02:59 +0000
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/" for ::1 at 2023-08-22 11:03:50 +0000
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/" for ::1 at 2023-08-22 11:03:50 +0000
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/" for ::1 at 2023-08-22 11:03:51 +0000
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/" for ::1 at 2023-08-22 11:03:51 +0000
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/posts" for ::1 at 2023-08-22 11:03:57 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/" for ::1 at 2023-08-22 11:05:41 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 160.6ms | Allocations: 94294)
+Completed 200 OK in 166ms (Views: 161.9ms | ActiveRecord: 0.0ms | Allocations: 98192)
+
+
+Started GET "/posts" for ::1 at 2023-08-22 11:05:48 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/posts" for ::1 at 2023-08-22 11:05:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/users" for ::1 at 2023-08-22 11:05:58 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2498)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 2759)
+
+
+Started GET "/users/show" for ::1 at 2023-08-22 11:06:07 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2586)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 2898)
+
+
+Started GET "/users/index" for ::1 at 2023-08-22 11:06:15 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2488)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 2746)
+
+
+Started GET "/users/index" for ::1 at 2023-08-22 11:06:17 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2502)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 2758)
+
+
+Started GET "/users" for ::1 at 2023-08-22 11:06:20 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2499)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 2755)
+
+
+Started GET "/users/user_id/posts" for ::1 at 2023-08-22 11:07:06 +0000
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"user_id"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 104)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2681)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 3319)
+
+
+Started GET "/users/user_id/posts/:id" for ::1 at 2023-08-22 11:07:26 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"user_id", "id"=>":id"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2586)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 2898)
+
+
