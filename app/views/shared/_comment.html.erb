@@ -1,0 +1,5 @@
+    <div  class = "comment-section">
+          <% post.comments.each do |comment| %>
+            <li ><span class = "comment-author"><%= comment.author.name %>: </span> <%= comment.text %></li>
+          <% end %>
+          </div>
