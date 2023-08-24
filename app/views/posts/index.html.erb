@@ -1,1 +1,18 @@
-<h1>Display a list of all posts for a specific user</h1>
+<div class="div-container">
+  <% if @user %>
+  <%= render partial: "shared/user", locals: { user: @user }%>
+    <div class= "post-ontainer">
+      <ul>
+        <% @posts.each do |post| %>
+        <div class = "show-li_elements">
+          <%= render partial: "shared/post", locals: { post: post }%>
+          <%= render partial: "shared/counters", locals: { post: post }%>
+            </div>
+           <%= render partial: "shared/comment", locals: { post: post }%>
+        <% end %>
+      </ul>
+    </div>
+  <% else %>
+    <p>User not found.</p>
+  <% end %>
+</div>

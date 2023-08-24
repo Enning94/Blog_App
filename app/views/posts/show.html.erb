@@ -1,1 +1,13 @@
-<h1>Display a specific post belonging to a specific user</h1>
+<div>
+<div class = "user-post">
+
+<div class = "show-li_elements">
+<ul class="p-wrap">
+ <li class = "p-title"><span><%= @post.title%></span> by <%= @post.author.name %></li>
+ <%= render partial: "shared/counters", locals: { post: @post }%>
+</ul>
+<li class= "p-text" ><%= @post.text%></li>
+</div>
+</div>
+<%= render partial: "shared/comment", locals: { post: @post }%>
+</div>

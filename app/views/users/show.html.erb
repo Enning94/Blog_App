@@ -1,1 +1,23 @@
-<h1>Display a specific user<h1>
+
+<div>
+<ul>
+<%= render "shared/user",  user: @user%>
+</ul>
+
+<div class = "bio-container">
+<div class ="bio-wrapper">
+<h5 class ="blog-title">Bio</h5>
+<li  class = "blog-text" ><%= @user.bio%></li>
+</div>
+</div>
+<div >
+<ul>
+<%@posts.each do |post|%>
+<div class = "show-li_elements">
+<%= render partial: "shared/post", locals: { post: post }%>
+<%= render partial: "shared/counters", locals: { post: post }%>
+</div>
+<% end %>
+</ul>
+</div>
+</div>
