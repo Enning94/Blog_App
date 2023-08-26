@@ -1,0 +1,15 @@
+<%= form_with model: [@post], url:user_posts_path(@user), local: true  do |f| %>
+<div>
+  <%= f.label :title%><br>
+  <%= f.text_field :title,  class: "form-title" %>
+</div>
+<div>
+  <%= f.label :text %><br>
+  <%= f.text_area :text, class: "form-text" %>
+</div>
+
+<div>
+<%=f.submit class: "form-btn"%>
+</div>
+
+<% end %>
