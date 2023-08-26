@@ -1,0 +1,5 @@
+ <div class ="likes-wrapper">
+ <%= form_with model: [ @post, @post.likes.build ], url: user_post_likes_path(author_id: @post.author.id, post_id: @post.id) do |form| %>
+    <%= form.submit 'Like', class: "form-btn"%>
+<% end %>
+</div>
