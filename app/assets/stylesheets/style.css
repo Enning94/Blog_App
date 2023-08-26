@@ -107,3 +107,35 @@
 .p-title {
   font-size: 1.5rem;
 }
+
+.form-wrapper {
+  text-align: center;
+  padding: 3rem;
+}
+
+.form-wrapper > form > div {
+  padding: 1rem;
+}
+
+.form-title {
+  border: 2px solid black;
+  padding: 0.7rem;
+}
+
+.form-text {
+  border: 2px solid black;
+  padding: 0.7rem;
+  height: 20vh;
+  width: 30%;
+}
+
+.form-btn {
+  border: 2px solid black;
+  background-color: rgb(131, 230, 232);
+  padding: 0.7rem;
+}
+
+.likes-wrapper {
+  text-align: right;
+  margin: 1rem;
+}
