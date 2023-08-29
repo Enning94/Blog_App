@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.feature 'Post new page', type: :feature do
-    fixtures :users, :posts, :comments
-    let(:user1) { users(:one) }
+  fixtures :users, :posts, :comments
+  let(:user1) { users(:one) }
   before do
     visit new_user_post_path(user1)
   end
@@ -17,7 +17,7 @@ RSpec.feature 'Post new page', type: :feature do
   scenario 'Clicking on create post redirects to index page for posts' do
     click_button 'Create Post'
     sleep(1)
-    
+
     expect(current_path).to eq(user_posts_path(user1))
   end
 end
