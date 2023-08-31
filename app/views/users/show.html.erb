@@ -2,6 +2,9 @@
 <div>
 <ul>
 <%= render "shared/user",  user: @user%>
+  <button class="btn-users">
+    <a class="btn-link" href="<%= new_user_post_path(@user.id)%>">Add Post</a>
+    </button>
 </ul>
 
 <div class = "bio-container">
@@ -15,7 +18,10 @@
 <%@posts.each do |post|%>
 <div class = "show-li_elements">
 <%= render partial: "shared/post", locals: { post: post }%>
-<%= render partial: "shared/counters", locals: { post: post }%>
+<%= render partial: "shared/counters", locals: { post: post}%>
+<%=render 'shared/likes_form', post: post %>
+<%= link_to "Add a comment", new_user_post_comment_path(post.author, post), remote: true %>
+
 </div>
 <% end %>
 </ul>
