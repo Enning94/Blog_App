@@ -8,13 +8,11 @@
  <%= render partial: "shared/counters", locals: { post: @post, user: @user } %>
 </ul>
 <li class= "p-text" ><%= @post.text%></li>
+<div class = "interaction-btn">
+<%= link_to "Add a comment", new_user_post_comment_path(@post.author, @post), class: "add-cmt-btn", remote: true %>
 <%=render 'shared/likes_form', post: @post%>
-<%= link_to "Add a comment", new_user_post_comment_path(@post.author, @post), remote: true %>
 </div>
-
 </div>
-
+</div>
 <%= render partial: "shared/comment", locals: { post: @post }%>
-<div class = "form-wrapper">
-</div>
 </div>

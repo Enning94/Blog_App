@@ -1,39 +1,33 @@
 <h2>Sign up</h2>
-
+<div class="form-wrapper">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
    <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    <%= f.text_field :name, autofocus: true, class:"form-field", autocomplete: "name", placeholder:"Name" %>
   </div>
 
    <div class="field">
-    <%= f.label :photo %><br />
-    <%= f.text_field :photo, autofocus: true, autocomplete: "photo" %>
+    <%= f.text_field :photo, autofocus: true, class:"form-field", autocomplete: "photo", placeholder:"Photo" %>
   </div>
 
   <div class="field">
-    <%= f.label :bio %><br />
-    <%= f.text_field :bio, autofocus: true, autocomplete: "bio" %>
+    <%= f.text_field :bio, autofocus: true, class:"form-field", autocomplete: "bio", placeholder:"Bio" %>
   </div>
   
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, class:"form-field", autocomplete: "email", placeholder:"Email" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", class:"form-field", placeholder: "Password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-field", placeholder: "Password Confirmation" %>
   </div>
 
   <div class="actions">
@@ -42,3 +36,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>

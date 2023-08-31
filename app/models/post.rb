@@ -12,8 +12,6 @@ class Post < ApplicationRecord
   def update_user_posts_counter
     return unless author.present?
 
-    return unless is_a?(Post) && new_record?
-
     author.update(posts_counter: author.posts_counter.to_i + 1)
   end
 
