@@ -9,8 +9,11 @@
         <div class = "show-li_elements">
           <%= render partial: "shared/post", locals: { post: post }%>
           <%= render partial: "shared/counters", locals: { post: post }%>
+<%=render 'shared/likes_form', post: @post%>
+<%= link_to "Add a comment", new_user_post_comment_path(post.author, post), remote: true %>
             </div>
            <%= render partial: "shared/comment", locals: { post: post }%>
+           
         <% end %>
       </ul>
     </div>

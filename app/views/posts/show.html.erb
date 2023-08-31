@@ -5,17 +5,16 @@
 <div class = "show-li_elements">
 <ul class="p-wrap">
  <li class = "p-title"><span><%= @post.title%></span> by <%= @post.author.name %></li>
- <%= render partial: "shared/counters", locals: { post: @post } %>
+ <%= render partial: "shared/counters", locals: { post: @post, user: @user } %>
 </ul>
 <li class= "p-text" ><%= @post.text%></li>
-<%= render 'shared/likes_form'%>
+<%=render 'shared/likes_form', post: @post%>
+<%= link_to "Add a comment", new_user_post_comment_path(@post.author, @post), remote: true %>
 </div>
 
 </div>
 
 <%= render partial: "shared/comment", locals: { post: @post }%>
 <div class = "form-wrapper">
-<h2>Add a comment:</h2>
-<%= render 'shared/comment_form',  post: @post  %>
 </div>
 </div>
