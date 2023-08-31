@@ -1,3 +1,5 @@
+<h1>Display a list of all posts for a specific user</h1>
+
 <div class="div-container">
   <% if @user %>
   <%= render partial: "shared/user", locals: { user: @user }%>
@@ -15,4 +17,7 @@
   <% else %>
     <p>User not found.</p>
   <% end %>
+  <div>
+  <%= will_paginate @posts,  class: "pagination" %>
+</div>
 </div>

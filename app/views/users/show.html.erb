@@ -1,4 +1,4 @@
-
+<h1>Display a specific user</h1>
 <div>
 <ul>
 <%= render "shared/user",  user: @user%>
@@ -20,4 +20,7 @@
 <% end %>
 </ul>
 </div>
+    <button class="btn-users">
+    <a class="btn-link" href="/users/<%= @user.id %>/posts">See all posts</a>
+    </button>
 </div>

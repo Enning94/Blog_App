@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
   def index
     @user = User.find_by(id: params[:user_id])
-
-    @posts = @user.posts.includes(:comments)
+    @posts = @user.posts.includes(:comments).paginate(page: params[:page], per_page: 3)
   end
 
   def show
@@ -18,12 +17,8 @@ class PostsController < ApplicationController
     @post = Post.new(params.require(:post).permit(:title, :text))
     @user = current_user
     @post.author = @user
-    if @post.save
-      flash[:success] = 'User posted successfully'
-      redirect_to user_posts_path(@user)
-    else
-      flash.now[:error] = 'Post not saved'
-      render :new, status: :unprocessable_entity
-    end
+    @post.save
+    flash[:success] = 'User posted successfully'
+    redirect_to user_posts_path(@user)
   end
 end

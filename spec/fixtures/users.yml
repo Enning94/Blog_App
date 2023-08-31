@@ -1,0 +1,20 @@
+one:
+  id: 1
+  name: Nelson Kakraba
+  photo: "https://images.unsplash.com/photo-1690741028234-d6c2d52c8c14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDU4fHRvd0paRnNrcEdnfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
+  bio: Cyclist from Miami
+  posts_counter: 6
+
+two:
+  id: 2
+  name: Prince Omar
+  photo: "https://images.unsplash.com/photo-1690741028234-d6c2d52c8c14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDU4fHRvd0paRnNrcEdnfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
+  bio: Software engineer from Russia
+  posts_counter: 0
+
+three:
+  id: 3
+  name: Abdul Kareem
+  photo: "https://images.unsplash.com/photo-1690741028234-d6c2d52c8c14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDU4fHRvd0paRnNrcEdnfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
+  bio: Teacher from Spain
+  posts_counter: 0
