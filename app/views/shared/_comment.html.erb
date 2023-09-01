@@ -1,5 +1,9 @@
     <div  class = "comment-section">
           <% post.comments.each do |comment| %>
             <li ><span class = "comment-author"><%= comment.author.name %>: </span> <%= comment.text %></li>
+                <%# <% if can? :destroy, comment %> %>
+   <%# <%= button_to 'Delete comment', user_post_path(comment.author, @post, comment), class: "add-cmt-btn", method: :delete %> %>
+<%# <%end%> %>
+          
           <% end %>
-          </div>
+      </div>

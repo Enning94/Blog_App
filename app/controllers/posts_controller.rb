@@ -21,4 +21,18 @@ class PostsController < ApplicationController
     flash[:success] = 'User posted successfully'
     redirect_to user_posts_path(@user)
   end
+
+  def destroy
+    user = current_user
+    @post = Post.find_by(id: params[:id], author_id: params[:user_id])
+    @post.likes.destroy_all
+    @post.comments.destroy_all
+
+    if @post.destroy
+      flash[:notice] = 'Post deleted!'
+    else
+      flash[:alert] = 'Error! Please try again later.'
+    end
+    redirect_to user_posts_path(user)
+  end
 end
