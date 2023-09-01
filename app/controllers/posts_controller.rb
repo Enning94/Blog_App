@@ -9,13 +9,14 @@ class PostsController < ApplicationController
   def show
     @user = User.find(params[:user_id])
     @post = Post.find_by(id: params[:id])
-    @comments = Comment.where(post_id: @post)  
+    @comments = Comment.where(post_id: @post)
   end
 
   def new
-     @post = Post.new
+    @post = Post.new
     user_id = params[:user_id].to_i
     return if current_user.id == user_id
+
     authorize! :create, @post
   end
 
@@ -33,7 +34,6 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id], author_id: params[:user_id])
     @post.likes.destroy_all
     @post.comments.destroy_all
-   
 
     if @post.destroy
       @post.decrement_counter
@@ -45,7 +45,8 @@ class PostsController < ApplicationController
   end
 
   private
+
   def post_params
     params.require(:post).permit(:title, :text)
-  end 
+  end
 end

@@ -22,20 +22,19 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
-    author = @comment.post.author
-    post = @comment.destroy
     if @comment.destroy
+      @comment.decrement_counter
       flash[:notice] = 'Comment deleted!'
     else
       flash[:alert] = 'Error! Please try again later.'
     end
-    redirect_to user_post_url(author, post)
   end
+
   private
 
   def comment_params
     params
       .require(:comment)
       .permit(:text)
-     end
+  end
 end

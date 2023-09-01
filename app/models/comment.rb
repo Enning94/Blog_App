@@ -8,4 +8,8 @@ class Comment < ApplicationRecord
 
     post.update(comments_counter: post.comments_counter.to_i + 1)
   end
+
+  def decrement_counter
+    post.decrement!(:comments_counter)
+  end
 end
