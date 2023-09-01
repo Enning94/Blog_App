@@ -9,7 +9,12 @@
 </ul>
 <li class= "p-text" ><%= @post.text%></li>
 <div class = "interaction-btn">
+<div class = "add-del-wrapper">
 <%= link_to "Add a comment", new_user_post_comment_path(@post.author, @post), class: "add-cmt-btn", remote: true %>
+<% if can? :destroy, @post %>
+   <%= button_to 'Delete post', user_post_path(@post.author, @post), class: "add-cmt-btn", method: :delete %>
+<%end%>
+</div>
 <%=render 'shared/likes_form', post: @post%>
 </div>
 </div>
