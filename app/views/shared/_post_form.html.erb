@@ -1,4 +1,4 @@
-<%= form_with model: [@post], url:user_posts_path(@user), local: true  do |f| %>
+<%= form_with model: [@post], url:user_posts_path, local: true  do |f| %>
 <div>
   <%= f.label :title%><br>
   <%= f.text_field :title,  class: "form-title" %>

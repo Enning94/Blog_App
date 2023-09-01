@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-  # load_and_authorize_resource
+  load_and_authorize_resource
+
   def new
     @comment = Comment.new
     respond_to(&:html)
@@ -19,9 +20,21 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @comment = Comment.find(params[:id])
+    if @comment.destroy
+      @comment.decrement_counter
+      flash[:notice] = 'Comment deleted!'
+    else
+      flash[:alert] = 'Error! Please try again later.'
+    end
+  end
+
   private
 
   def comment_params
-    params.require(:comment).permit(:text)
+    params
+      .require(:comment)
+      .permit(:text)
   end
 end

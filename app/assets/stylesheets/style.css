@@ -205,3 +205,8 @@ h2 {
   padding: 1rem;
   text-align: center;
 }
+
+.add-del-wrapper {
+  display: flex;
+  gap: 1rem;
+}
