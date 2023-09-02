@@ -59,8 +59,8 @@ group :development, :test do
   # Test with RSpec gem
   gem 'rspec-rails'
 
-  gem 'rswag-specs'
   gem 'rails-controller-testing'
+  gem 'rswag-specs'
 end
 
 group :development do
@@ -79,7 +79,6 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
-   
 end
 
 gem 'devise', '~> 4.9'
