@@ -1,7 +1,4 @@
-class Api::V1::CommentsController < ApplicationController
-  load_and_authorize_resource
-  before_action :authenticate_user!
-
+class Api::V1::CommentsController < ActionController::API # Extend API class which is the recommended base class for API's
   def index
     @comments = Comment.where(post_id: post.id)
     render json: @comments
@@ -12,15 +9,13 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   def create
-    comment = Comment.new(comment_params)
-    comment.post = @post
-    comment.author = current_user
-    if comment.save
-      flash[:success] = 'Comment saved successfully'
-      redirect_to "/users/#{params[:user_id]}/posts/#{params[:post_id]}"
+    @post    = post # Select the post to be commented on
+    @comment = @post.comments.new(comment_params) 
+
+    if @comment.save
+      render json: @comment, status: :created
     else
-      flash.now[:error] = 'Error: comment could not be saved'
-      redirect_to new_comment
+      render json: @comment.errors, status: :unprocessable_entity
     end
   end
 
@@ -39,7 +34,7 @@ class Api::V1::CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:title, :text)
+    params.require(:comment).permit(:text, :author_id) # pass comment text and author in the body of the request
   end
 
   def user
