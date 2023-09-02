@@ -1,4 +1,7 @@
 class Api::V1::CommentsController < ApplicationController
+  load_and_authorize_resource
+  before_action :authenticate_user!
+
   def index
     @comments = Comment.where(post_id: post.id)
     render json: @comments
@@ -9,12 +12,15 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.new(comment_params)
-
-    if @comment.save
-      render json: @comment, status: :created, location: @comment
+    comment = Comment.new(comment_params)
+    comment.post = @post
+    comment.author = current_user
+    if comment.save
+      flash[:success] = 'Comment saved successfully'
+      redirect_to "/users/#{params[:user_id]}/posts/#{params[:post_id]}"
     else
-      render json: @comment.errors, status: :unprocessable_entity
+      flash.now[:error] = 'Error: comment could not be saved'
+      redirect_to new_comment
     end
   end
 

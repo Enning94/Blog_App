@@ -1,5 +1,5 @@
  <div class ="likes-wrapper">
- <%= form_with model: @likes, url: user_post_likes_path(post.author, post.id), scope: :like do |form| %>
+ <%= form_with(model: @likes), url: user_post_likes_path(post.author, post.id), scope: :like do |form| %>
     <%= form.submit 'Like', class: "form-btn"%>
 <% end %>
 </div>

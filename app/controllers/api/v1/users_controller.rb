@@ -1,4 +1,7 @@
 class Api::V1::UsersController < ApplicationController
+  load_and_authorize_resource
+  before_action :authenticate_user!
+
   def index
     @users = User.all.select('name, id, bio, email')
     render json: @users

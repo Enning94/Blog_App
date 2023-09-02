@@ -1,4 +1,7 @@
 class Api::V1::PostsController < ApplicationController
+  load_and_authorize_resource
+  before_action :authenticate_user!
+
   def index
     @posts = Post.where(author_id: user.id)
     render json: @posts
