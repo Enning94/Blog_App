@@ -79,4 +79,6 @@ config.action_mailer.smtp_settings = {
   :authentication => :cram_md5
 }
 
+config.debug_exception_response_format = :api
+
 end
