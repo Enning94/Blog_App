@@ -1,4 +1,4 @@
-class Api::V1::CommentsController < ActionController::API # Extend API class which is the recommended base class for API's
+class Api::V1::CommentsController < ActionController::API
   def index
     @comments = Comment.where(post_id: post.id)
     render json: @comments
@@ -9,8 +9,8 @@ class Api::V1::CommentsController < ActionController::API # Extend API class whi
   end
 
   def create
-    @post    = post # Select the post to be commented on
-    @comment = @post.comments.new(comment_params) 
+    @post = post
+    @comment = @post.comments.new(comment_params)
 
     if @comment.save
       render json: @comment, status: :created
